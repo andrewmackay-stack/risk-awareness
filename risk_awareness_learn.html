@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Performance Management Risks: Definitions</title>
+    <!-- Load Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Import Google Font: Source Sans Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Apply Source Sans Pro as the default font */
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: #f9fafb; /* bg-gray-50 */
+        }
+        .accordion-content.open {
+            max-height: 500px; /* Adjust as needed */
+            transition: max-height 0.5s ease-in;
+        }
+    </style>
+</head>
+<body class="bg-white"> <!-- Removed Tailwind's font-sans to use the CSS style rule -->
+
+    <div class="max-w-3xl mx-auto p-6 md:p-10">
+        
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">
+            Key Performance Management Risks: Definitions
+        </h2>
+        <p class="text-lg text-gray-600 mb-8">
+            Before we dive into scenarios, click on each term to understand its meaning.
+        </p>
+
+        <!-- Definition 1: Constructive Dismissal -->
+        <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+            <!-- Accordion Toggle Button -->
+            <button class="accordion-toggle w-full flex justify-between items-center p-5 focus:outline-none" style="background-color: #ff6469;">
+                <span class="text-xl font-semibold" style="color: #ffffff;">Constructive Dismissal</span>
+                <svg class="w-6 h-6 text-white transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            
+            <!-- Accordion Content -->
+            <div class="accordion-content">
+                <div class="p-6 border-t border-gray-200">
+                    <p class="text-base text-gray-700">
+                        When an employer’s actions or conduct force an employee to resign, such as creating an intolerable environment (e.g., unfair reviews, unreasonable demands, or a hostile workplace).
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Definition 2: Discrimination -->
+        <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+            <!-- Accordion Toggle Button -->
+            <button class="accordion-toggle w-full flex justify-between items-center p-5 focus:outline-none" style="background-color: #ff6469;">
+                <span class="text-xl font-semibold" style="color: #ffffff;">Discrimination</span>
+                <svg class="w-6 h-6 text-white transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            
+            <!-- Accordion Content -->
+            <div class="accordion-content">
+                <div class="p-6 border-t border-gray-200">
+                    <p class="text-base text-gray-700">
+                        Making performance-related decisions based on protected characteristics (e.g., age, gender, race, disability). This can include biased feedback, unequal standards, or discriminatory outcomes.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Definition 3: Wellbeing Concerns -->
+        <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+            <!-- Accordion Toggle Button -->
+            <button class="accordion-toggle w-full flex justify-between items-center p-5 focus:outline-none" style="background-color: #ff6469;">
+                <span class="text-xl font-semibold" style="color: #ffffff;">Wellbeing Concerns</span>
+                <svg class="w-6 h-6 text-white transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            
+            <!-- Accordion Content -->
+            <div class="accordion-content">
+                <div class="p-6 border-t border-gray-200">
+                    <p class="text-base text-gray-700">
+                        Risks to employee wellbeing caused or worsened by performance management, such as stress, anxiety, or burnout. Sometimes, wellbeing issues may make it temporarily unfair or unreasonable to expect good performance.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // JavaScript for the accordion functionality
+        document.querySelectorAll('.accordion-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('svg');
+
+                if (content.classList.contains('open')) {
+                    content.classList.remove('open');
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    // Optional: Close other accordions when one opens
+                    // document.querySelectorAll('.accordion-content.open').forEach(openContent => {
+                    //     openContent.classList.remove('open');
+                    //     openContent.previousElementSibling.querySelector('svg').style.transform = 'rotate(0deg)';
+                    // });
+
+                    content.classList.add('open');
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+
+
