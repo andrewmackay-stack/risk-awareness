@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informal Performance Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-content.open {
+            max-height: 500px;
+            transition: max-height 0.5s ease-in;
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Accordion 1: Informal -->
+    <div class="shadow-sm rounded-lg overflow-hidden">
+        <!-- Accordion Title 1 -->
+        <button class="accordion-toggle w-full flex justify-between items-center p-5 text-white focus:outline-none rounded-t-lg" style="background-color: #11b5ea;">
+            <span class="text-lg font-semibold">Informal performance management</span>
+            <svg class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        </button>
+        
+        <!-- Accordion Content 1 -->
+        <div class="accordion-content bg-white border border-gray-200 border-t-0 rounded-b-lg">
+            <p class="text-base text-gray-700 p-6">
+                This process is globally consistent. Focus on two best practices: maintain open communication and keep thorough documentation of performance-related discussions.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        const button = document.querySelector('.accordion-toggle');
+        button.classList.add('rounded-b-lg'); // Start closed
+
+        button.addEventListener('click', () => {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('svg');
+            const isCurrentlyOpen = content.classList.contains('open');
+
+            if (isCurrentlyOpen) {
+                content.classList.remove('open');
+                icon.style.transform = 'rotate(0deg)';
+                button.classList.add('rounded-b-lg');
+            } else {
+                content.classList.add('open');
+                icon.style.transform = 'rotate(180deg)';
+                button.classList.remove('rounded-b-lg');
+            }
+        });
+    </script>
+
+</body>
+</html>
