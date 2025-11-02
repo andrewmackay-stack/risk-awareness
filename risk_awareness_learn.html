@@ -97,15 +97,19 @@
                 const icon = button.querySelector('svg');
 
                 if (content.classList.contains('open')) {
+                    // It's already open, so just close it
                     content.classList.remove('open');
                     icon.style.transform = 'rotate(0deg)';
                 } else {
-                    // Optional: Close other accordions when one opens
-                    // document.querySelectorAll('.accordion-content.open').forEach(openContent => {
-                    //     openContent.classList.remove('open');
-                    //     openContent.previousElementSibling.querySelector('svg').style.transform = 'rotate(0deg)';
-                    // });
+                    // It's closed, so open it...
+                    
+                    // ...but first, close all other open accordions
+                    document.querySelectorAll('.accordion-content.open').forEach(openContent => {
+                        openContent.classList.remove('open');
+                        openContent.previousElementSibling.querySelector('svg').style.transform = 'rotate(0deg)';
+                    });
 
+                    // Now open the one that was clicked
                     content.classList.add('open');
                     icon.style.transform = 'rotate(180deg)';
                 }
