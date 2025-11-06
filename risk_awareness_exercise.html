@@ -5,7 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Performance Management Risks</title>
     <!-- Load Tailwind CSS for styling --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Import Google Font: Source Sans Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    
     <style>
+        /* Apply Source Sans Pro as the default font */
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
         /* A little extra style for the accordion content */
         .accordion-content {
             max-height: 0;
@@ -40,7 +50,7 @@
         }
     </style>
 </head>
-<body class="bg-white font-sans">
+<body class="bg-white"> <!-- Removed font-sans to use the style rule -->
     <!-- Changed max-w-7xl back to max-w-3xl -->
     <div class="max-w-3xl mx-auto p-6 md:p-10 bg-white rounded-lg shadow-md my-10">
         
@@ -49,9 +59,9 @@
         <!-- Risk 1: Constructive Dismissal -->
         <div class="mb-6 border border-gray-200 rounded-lg overflow-hidden">
             <!-- Scenario Panel --><div class="p-5 border-l-4" style="background-color: #e7f7fd; border-color: #11b5ea;">
-                <h3 class="font-bold" style="color: #028dde;">Scenario 1</h3>
+                <h3 class="font-bold text-xl" style="color: #028dde;">Scenario 1</h3>
                 <p class="mt-2" style="color: #028dde;">
-                    You're frustrated with an employee's consistently poor work. You decide to assign them only tedious, low-impact tasks and stop inviting them to key team meetings, hoping they'll "get the message." The employee resigns a week later.
+                    You're frustrated that an employee's work that is consistently not meeting the required standard. You decide to assign them only tedious, low-impact tasks and stop inviting them to key team meetings, hoping they'll "get the message." The employee resigns a week later.
                 </p>
             </div>
             
@@ -68,12 +78,12 @@
                         <strong>What it is:</strong> When an employer’s actions or conduct force an employee to resign, such as creating an intolerable environment (e.g., unfair reviews, unreasonable demands, or a hostile workplace).
                     </p>
                     
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Your Mitigation Checklist</h3>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Your mitigation checklist:</h3>
                     <ul class="mitigation-list text-gray-700 space-y-3">
-                        <li>Am I genuinely addressing this employee's feedback and concerns, rather than trying to "manage them out"?</li>
+                        <li>Am I genuinely addressing this employee's feedback and concerns?</li>
                         <li>Am I maintaining open, professional, and respectful communication?</li>
-                        <li>Am I fostering a positive and inclusive environment for all team members?</li>
-                        <li>Am I following fair procedures and all company policies for performance management?</li>
+                        <li>Am I actively excluding this team member from key activities (meetings, projects) in a way that could be seen as isolating them?</li>
+                        <li>Am I following guidance on managing underperformance, as set out in <u class="underline">Dealing with Underperformance - People Leader Guide</u>?</li>
                     </ul>
                 </div>
             </div>
@@ -82,9 +92,9 @@
         <!-- Risk 2: Discrimination -->
         <div class="mb-6 border border-gray-200 rounded-lg overflow-hidden">
             <!-- Scenario Panel --><div class="p-5 border-l-4" style="background-color: #e7f7fd; border-color: #11b5ea;">
-                <h3 class="font-bold" style="color: #028dde;">Scenario 2</h3>
+                <h3 class="font-bold text-xl" style="color: #028dde;">Scenario 2</h3>
                 <p class="mt-2" style="color: #028dde;">
-                    During a performance review, you mention to an older employee that they "seem less energetic" than the younger team members. Their performance rating is lower than a junior colleague's, despite having similar output.
+                    During a performance review, you mention to an older employee that they "seem less energetic" than the younger team members. Their performance rating is lower than their younger peers, despite having similar output.
                 </p>
             </div>
             
@@ -101,11 +111,10 @@
                         <strong>What it is:</strong> Making performance-related decisions based on protected characteristics (e.g., age, gender, race, disability). This can include biased feedback, unequal standards, or discriminatory outcomes.
                     </p>
                     
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Your Mitigation Checklist</h3>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Your mitigation checklist:</h3>
                     <ul class="mitigation-list text-gray-700 space-y-3">
-                        <li>Is my feedback 100% objective and based only on clear, measurable criteria and defined job responsibilities?</li>
-                        <li>Am I applying the exact same standards and role-specific performance criteria to all team members equally?</li>
-                        <li>Am I keeping clear documentation throughout the performance management process?</li>
+                        <li>Is my feedback 100% objective and based on behaviour and output, not personality or subjective traits?</li>
+                        <li>Am I applying the exact same standards and role-specific performance criteria to all team members equally,&nbsp;when they are in the same type of role?</li>
                         <li>Am I maintaining open communication and addressing concerns promptly and fairly if raised?</li>
                     </ul>
                 </div>
@@ -115,9 +124,9 @@
         <!-- Risk 3: Wellbeing Concerns -->
         <div class="mb-6 border border-gray-200 rounded-lg overflow-hidden">
             <!-- Scenario Panel --><div class="p-5 border-l-4" style="background-color: #e7f7fd; border-color: #11b5ea;">
-                <h3 class="font-bold" style="color: #028dde;">Scenario 3</h3>
+                <h3 class="font-bold text-xl" style="color: #028dde;">Scenario 3</h3>
                 <p class="mt-2" style="color: #028dde;">
-                    An employee, who is usually a high performer, suddenly starts missing deadlines and seems disengaged. You immediately schedule a performance discussion and plan to focus solely on their drop in output.
+                    An employee, who is usually a high performer, suddenly starts missing deadlines and seems disengaged, but has also shared with you that they are experiencing wellbeing challenges. You immediately schedule a performance discussion and plan to focus solely on their drop in output.
                 </p>
             </div>
             
@@ -134,12 +143,10 @@
                         <strong>What it is:</strong> Risks to employee wellbeing caused or worsened by performance management, such as stress or burnout. Sometimes, wellbeing issues may make it temporarily unfair to expect good performance.
                     </p>
                     
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Your Mitigation Checklist</h3>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Your mitigation checklist:</h3>
                     <ul class="mitigation-list text-gray-700 space-y-3">
-                        <li>Am I leading the discussion with empathy first, before jumping to performance metrics? (e.g., "I've noticed... is everything okay?")</li>
-                        <li>Am I ready to proactively offer support, like the EAP?</li>
-                        <li>Have I considered whether a temporary workload adjustment or other support is needed?</li>
-                        <li>Will I clearly offer this support in writing (e.g., in a follow-up email) to document it?</li>
+                        <li>Am I leading the discussion with empathy first? (e.g., "I've noticed... is everything okay?")</li>
+                        <li>Am I ready to proactively offer support, like the EAP or a temporary workload adjustment, and ensure I share this in writing?</li>
                         <li>Should I consult with PX for guidance before and performance conversations, given the sudden change?</li>
                     </ul>
                 </div>
@@ -185,4 +192,3 @@
 
 </body>
 </html>
-
